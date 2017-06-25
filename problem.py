@@ -17,7 +17,7 @@ _target_column_names = [
 
 score_types = [
     rw.score_types.RMSE(
-        name='rmse', precision=2, n_columns=len(_target_column_names)),
+        name='rmse', precision=1, n_columns=len(_target_column_names)),
 ]
 
 
