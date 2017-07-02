@@ -12,7 +12,7 @@ _target_column_names = [
     'g_mIntestine (C17-21)',
 ]
 # A type (class) which will be used to create wrapper objects for y_pred
-Predictions = rw.prediction_types.regression.make_predictions_type(
+Predictions = rw.prediction_types.make_regression(
     label_names=_target_column_names)
 # An object implementing the workflow
 workflow = rw.workflows.FeatureExtractorRegressor()
