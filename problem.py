@@ -4,9 +4,6 @@ import rampwf as rw
 from sklearn.model_selection import ShuffleSplit
 
 problem_title = 'Epidemium cancer mortality rate prediction (2nd RAMP)'
-prediction_type = rw.prediction_types.regression
-workflow = rw.workflows.FeatureExtractorRegressor()
-prediction_labels = None
 _target_column_names = [
     'g_mColon (C18)',
     'g_mLiver (C22)',
@@ -14,6 +11,11 @@ _target_column_names = [
     'g_mColon, rectum and anus (C18-21)',
     'g_mIntestine (C17-21)',
 ]
+# A type (class) which will be used to create wrapper objects for y_pred
+Predictions = rw.prediction_types.regression.make_predictions_type(
+    label_names=_target_column_names)
+# An object implementing the workflow
+workflow = rw.workflows.FeatureExtractorRegressor()
 
 score_types = [
     rw.score_types.RMSE(
