@@ -18,8 +18,7 @@ Predictions = rw.prediction_types.make_regression(
 workflow = rw.workflows.FeatureExtractorRegressor()
 
 score_types = [
-    rw.score_types.RMSE(
-        name='rmse', precision=1, n_columns=len(_target_column_names)),
+    rw.score_types.RMSE(name='rmse', precision=1),
 ]
 
 
