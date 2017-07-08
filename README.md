@@ -13,3 +13,5 @@ ramp_test_submission
 ```
 
 to test the starting kit submission (`submissions/starting_kit`).
+
+Get started on this RAMP with the [dedicated notebook](epidemium2_cancer_mortality_starting_kit.ipynb).
